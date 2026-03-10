@@ -1,0 +1,258 @@
+.interview {
+  padding: 2.5rem;
+  color: #eef2f7;
+  background: #070a13;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 280px;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .interview {
+    grid-template-columns: 1fr;
+  }
+
+  .interview__nav,
+  .interview__aside {
+    order: 0;
+  }
+}
+
+.interview__nav {
+  position: sticky;
+  top: 1.7rem;
+  align-self: start;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+}
+
+.interview__navInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.interview__navTitle {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.interview__navItem {
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: #eef2f7;
+  text-align: left;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+  font-size: 0.9rem;
+}
+
+.interview__navItem:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.interview__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.interview__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.interview__title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.interview__subtitle {
+  margin: 0.6rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 520px;
+}
+
+.interview__score {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.interview__scoreLabel {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.interview__scoreValue {
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #ff3b8e;
+}
+
+.interview__section {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+}
+
+.section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.card__intention {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 0.35rem 0 0.85rem;
+}
+
+.card__answer {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 0.85rem;
+}
+
+.card__answer p {
+  margin: 0.35rem 0 0;
+  line-height: 1.5;
+}
+
+.interview__aside {
+  position: sticky;
+  top: 1.7rem;
+  align-self: start;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  height: fit-content;
+}
+
+.skill-gaps__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.skill-gaps__title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.skill-gaps__hint {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.skill-gaps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #eef2f7;
+  font-size: 0.85rem;
+}
+
+.skill-pill--high {
+  border-color: rgba(255, 59, 142, 0.4);
+  background: rgba(255, 59, 142, 0.18);
+}
+
+.skill-pill--medium {
+  border-color: rgba(94, 159, 255, 0.4);
+  background: rgba(94, 159, 255, 0.18);
+}
+
+.skill-pill--low {
+  border-color: rgba(111, 255, 191, 0.35);
+  background: rgba(111, 255, 191, 0.14);
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.roadmap__card {
+  padding: 1.25rem;
+}
+
+.roadmap__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.85rem;
+}
+
+.roadmap__day {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.roadmap__focus {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.roadmap__tasks {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.roadmap__tasks li {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 700px) {
+  .interview__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .interview__score {
+    width: 100%;
+  }
+}
