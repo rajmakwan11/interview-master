@@ -43,4 +43,13 @@ async function getInterviewReportByController(req,res){
 
 }
 
-module.exports = {generateInterviewReportController, getInterviewReportByController}
+async function getAllInterviewReportsController(req,res){
+    const interviewReports = await interviewReportModel.find({user:req.user.id}).sort({createdAt:-1}).select("-resume -selfDescription -jobDescription -__v -technicalQuestions -behavioralQuestions -skillGaps -preparationPlan")
+
+    res.status(200).json({
+        message:"Inteview Reports fetched successfully",
+        interviewReports
+    })
+}
+
+module.exports = {generateInterviewReportController, getInterviewReportByController, getAllInterviewReportsController}

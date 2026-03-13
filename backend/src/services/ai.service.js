@@ -76,6 +76,10 @@ const interviewSchema = {
           type: "number",
           minimum: 0,
           maximum: 100
+        },
+
+        title: {
+          type:"string"
         }
       },
 
@@ -84,7 +88,8 @@ const interviewSchema = {
         "behavioralQuestions",
         "skillGaps",
         "preparationPlan",
-        "matchScore"
+        "matchScore",
+        "title"
       ],
 
       additionalProperties: false

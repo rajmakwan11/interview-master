@@ -7,7 +7,6 @@ export const AuthProvider = ({children})=>{
     const [loading, setLoading] = useState(true)
 
     
-
     return(
         <AuthContext.Provider value={{user, setUser, loading, setLoading}}>
             {children}
